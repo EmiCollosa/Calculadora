@@ -1,0 +1,83 @@
+/* Estilos generales */
+* {
+  font-family: "Fraunces", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal de la calculadora */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Calculadora {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  background-color: rgb(255, 182, 227);
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los botones */
+button {
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  padding: 20px;
+  font-size: 1.5em;
+  border-radius: 16px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+button:active {
+  background-color: #ff30dd;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Botones de tamaño especial */
+.col-2 {
+  grid-column: span 2;
+}
+
+/* Pantalla de la calculadora */
+.display {
+  grid-column: span 4;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: rgb(209, 203, 206);
+  border-radius: 16px;
+  text-align: right;
+  justify-content: space-between;
+  word-break: break-all;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#valor-actual {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#valor-anterior {
+  font-size: 1.5em;
+}
